@@ -19,9 +19,10 @@ jobs:
           echo '${{ github }}'
           echo "============================"    
           echo '${{ job.status }}'
-          if '${{ job.status }}' == failure ;then
-            echo fail 
+          echo "============================"  
+          if '${{ job.status }}' == "failure" ;then
+            echo "fail" 
           elae
-            echo ok
+            echo "ok"
           fi
           echo "============================" 

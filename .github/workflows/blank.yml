@@ -16,6 +16,12 @@ jobs:
         run: |
           printenv
           echo "============================"
-          echo '${{ toJSON(github) }}'
+          echo '${{ github }}'
           echo "============================"    
           echo '${{ job.status }}'
+          if '${{ job.status }}' == failure ;then
+            echo fail 
+          elae
+            echo ok
+          fi
+          echo "============================" 

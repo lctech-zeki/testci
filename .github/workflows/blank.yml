@@ -20,7 +20,7 @@ jobs:
           echo "============================"    
           echo '${{ job.status }}'
           echo "============================"  
-          if echo "${{ job.status }}" == "failure" ;then
+          if "${{ job.status }}" -eq "failure" ;then
             echo "fail" 
           elae
             echo "ok"
